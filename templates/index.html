@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Downloader</h1>
+        <form method="POST" action="/">
+            <label for="url">Enter YouTube URL:</label>
+            <input type="text" id="url" name="url" placeholder="https://www.youtube.com/watch?v=..." required>
+            
+            <label for="download_type">Select Download Type:</label>
+            <select id="download_type" name="download_type">
+                <option value="video">Video</option>
+                <option value="audio">Audio (MP3)</option>
+            </select>
+            
+            <button type="submit">Download</button>
+        </form>
+    </div>
+</body>
+</html>
